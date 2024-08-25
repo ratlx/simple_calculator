@@ -17,7 +17,7 @@ public:
     explicit evaluateExpression(std::string&);
     bool isOpt(char);
     char precede(char,char);
-    double operate(double,char,double);
+    long double operate(long double,char,long double);
     double calculate();
 };
 

@@ -82,7 +82,7 @@ char evaluateExpression::precede(char t1, char t2) {
     return f;
 }
 
-double evaluateExpression::operate(double num1, char opt, double num2) {
+long double evaluateExpression::operate(long double num1, char opt,long double num2) {
     switch (opt){
         case '+':
             return num1 + num2;
@@ -97,11 +97,11 @@ double evaluateExpression::operate(double num1, char opt, double num2) {
 
 double evaluateExpression::calculate() {
     std::stack<char> sch;
-    std::stack<double> sdouble;
+    std::stack<long double> sdouble;
     char ch, opt;
-    double tmp, num1, num2, res;
+    long double tmp, num1, num2, res;
     bool prnm = false, minus=false;
-    double isft=0;
+    long double isft=0;
     sch.push('#');
     iss>>ch;
     int pos=0;

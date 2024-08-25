@@ -84,7 +84,7 @@ void Widget::on_equalButton_clicked()
         auto str=expression.toStdString();
         evaluateExpression solve(str);
         auto res=solve.calculate();
-        expression=QString::number(res);
+        expression=QString::number(res,'g',10);
         ui->mainLineEdit->setText(expression);
     }
     else {
@@ -106,12 +106,11 @@ void Widget::on_addButton_clicked()
     ui->mainLineEdit->setText(expression);
 }
 
-
-void Widget::on_threeButton_clicked()
-{
+void Widget::on_threeButton_clicked(){
     expression+='3';
     ui->mainLineEdit->setText(expression);
 }
+
 
 
 void Widget::on_twoButton_clicked()

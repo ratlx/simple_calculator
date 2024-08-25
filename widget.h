@@ -18,7 +18,6 @@ public:
     ~Widget();
 
 private slots:
-
     void on_floatButton_clicked();
 
     void on_zerozeroButton_clicked();
